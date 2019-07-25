@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ContactApi.Repositories.Interfaces
 {
-    public interface IBaseCRUD<T> where T : BaseModel
+    public interface IBaseRepository<T> where T : BaseModel
     {
         T Get(int id);
         IList<T> All();

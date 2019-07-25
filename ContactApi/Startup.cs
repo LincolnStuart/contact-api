@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ContactApi.Models;
 using ContactApi.Repositories;
 using ContactApi.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -31,7 +32,7 @@ namespace ContactApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<ApplicationContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("Default")));
-            services.AddTransient<IContactRepository, ContactRepository>();
+            services.AddTransient<IBaseRepository<Contact>, ContactRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

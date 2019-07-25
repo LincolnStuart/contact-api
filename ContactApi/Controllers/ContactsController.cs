@@ -13,9 +13,9 @@ namespace ContactApi.Controllers
     [ApiController]
     public class ContactsController : ControllerBase
     {
-        private readonly IContactRepository repo;
+        private readonly IBaseRepository<Contact> repo;
 
-        public ContactsController(IContactRepository contactRepository)
+        public ContactsController(IBaseRepository<Contact> contactRepository)
         {
             this.repo = contactRepository;
         }

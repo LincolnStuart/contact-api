@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ContactApi.Repositories
 {
-    public class ContactRepository : BaseRepository<Contact>, IContactRepository
+    public class ContactRepository : BaseRepository<Contact>, IBaseRepository<Contact>
     {
         public ContactRepository(ApplicationContext context) : base(context) { }
 
