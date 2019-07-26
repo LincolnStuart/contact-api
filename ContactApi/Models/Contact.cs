@@ -12,6 +12,7 @@ namespace ContactApi.Models
         [MinLength(3)]
         [MaxLength(100)]
         public string Name { get; set; }
+        [Phone]
         [Required]
         public string PhoneNumber { get; set; }
         [Required]
